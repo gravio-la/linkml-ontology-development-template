@@ -1,0 +1,33 @@
+# Pinned pip requirements for ontology dev shells (Python 3.12).
+# Install in venv: pip install -r requirements/ontology-requirements.txt
+# Versions pinned for reproducibility.
+
+# LinkML schema language and generators (OWL, SHACL, JSON Schema, etc.)
+linkml>=1.7,<2
+linkml-runtime>=1.7,<2
+
+# SHACL validation with OWL inferencing
+pyshacl>=0.26
+
+# Ontology documentation (HTML from OWL)
+pylode>=3.0
+
+# Python OWL interface and reasoning
+owlready2>=0.47
+
+# CLI for inspecting RDF/OWL/SKOS
+ontospy>=1.9
+
+# SPARQL endpoint client
+sparqlwrapper>=2.0
+
+# eccenca Corporate Memory CLI (optional, for cmem integration)
+cmem-cmemc>=25.0
+
+# YAML/JSON (often provided by Nix; pin if using venv-only)
+pyyaml>=6.0
+jsonschema>=4.0
+
+# Utilities for CLI scripts
+requests>=2.28
+click>=8.0
