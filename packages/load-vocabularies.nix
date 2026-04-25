@@ -18,7 +18,6 @@ stdenv.mkDerivation {
 
   meta = with lib; {
     description = "Download and load schema.org, DC, SKOS, PROV-O, FOAF, ORG, SHACL into a triple store";
-    homepage = "https://github.com/bastiion/ontology-infra";
     license = licenses.mit;
     platforms = platforms.unix;
     mainProgram = "onto-load-vocabularies";

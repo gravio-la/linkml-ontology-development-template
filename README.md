@@ -1,6 +1,6 @@
 # Ontology Engineering Infrastructure (NixOS Flake)
 
-Reproducible NixOS infrastructure for the full ontology engineering lifecycle: LinkML, SHACL, triple stores (Virtuoso, Oxigraph), documentation (pyLODE, WIDOCO), and the Graviola CRUD framework. Can be used as a template for new ontology projects.
+Reproducible NixOS infrastructure for the full ontology engineering lifecycle: LinkML, SHACL, triple stores (Virtuoso, Oxigraph), documentation (pyLODE, WIDOCO), and the Graviola CRUD framework. Can be used to create, engineer and maintain SHACL-centric ontology projects.
 
 ## Quick start
 
@@ -19,7 +19,7 @@ With [direnv](https://direnv.net/): run `direnv allow` in the repo; then `nix de
 ## Scaffold a new ontology project
 
 ```bash
-nix flake init -t .#ontology-project
+nix flake init -t github:gravio-la/linkml-ontology-development-template# 
 nix develop
 # Edit src/schema.yaml, then:
 make generate
