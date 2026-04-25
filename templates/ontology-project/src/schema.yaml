@@ -1,0 +1,56 @@
+# LinkML schema — replace with your domain model
+# See https://linkml.io/linkml/schemas/intro.html
+
+id: https://example.org/my-ontology
+name: my-ontology
+title: My Ontology
+description: |
+  Example LinkML schema for ontology engineering.
+  Define classes, slots, and enums; then run `make generate` to produce OWL, SHACL, JSON Schema.
+
+version: 0.1.0
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  example: https://example.org/my-ontology/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  owl: http://www.w3.org/2002/07/owl#
+
+default_prefix: example
+default_range: string
+
+imports:
+  - linkml:types
+
+classes:
+  NamedThing:
+    description: A generic entity with a name
+    attributes:
+      id:
+        identifier: true
+        range: string
+      name:
+        required: true
+        range: string
+      description:
+        range: string
+
+  Person:
+    is_a: NamedThing
+    description: A person
+    attributes:
+      email:
+        range: string
+        pattern: "^[^@]+@[^@]+\\.[^@]+$"
+
+  Organization:
+    is_a: NamedThing
+    description: An organization
+
+enums:
+  Status:
+    permissible_values:
+      draft:
+      published:
+      retired:

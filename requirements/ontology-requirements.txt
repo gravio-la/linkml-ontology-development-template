@@ -21,9 +21,6 @@ ontospy>=1.9
 # SPARQL endpoint client
 sparqlwrapper>=2.0
 
-# eccenca Corporate Memory CLI (optional, for cmem integration)
-cmem-cmemc>=25.0
-
 # YAML/JSON (often provided by Nix; pin if using venv-only)
 pyyaml>=6.0
 jsonschema>=4.0

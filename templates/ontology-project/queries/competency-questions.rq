@@ -1,0 +1,19 @@
+# Competency questions — SPARQL queries that the ontology should answer
+# Run with: arq --data generated/owl/*.ttl --data data/sample-instances.ttl --query queries/competency-questions.rq
+
+PREFIX example: <https://example.org/my-ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# CQ1: List all persons
+SELECT ?person ?name
+WHERE {
+  ?person a example:Person ;
+          example:name ?name .
+}
+
+# CQ2: List all organizations (uncomment to run)
+# SELECT ?org ?name
+# WHERE {
+#   ?org a example:Organization ;
+#        example:name ?name .
+# }

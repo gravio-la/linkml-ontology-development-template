@@ -19,7 +19,6 @@ stdenv.mkDerivation {
 
   meta = with lib; {
     description = "CLI scripts: onto-generate, onto-validate, onto-deploy, onto-document, onto-load-vocabs";
-    homepage = "https://github.com/bastiion/ontology-infra";
     license = licenses.mit;
     platforms = platforms.unix;
     mainProgram = "onto-generate";

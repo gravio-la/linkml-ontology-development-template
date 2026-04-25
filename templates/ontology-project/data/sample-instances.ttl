@@ -1,0 +1,18 @@
+@prefix example: <https://example.org/my-ontology/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+example:person-1 a example:Person ;
+    rdfs:label "Alice" ;
+    example:name "Alice" ;
+    example:email "alice@example.org" .
+
+example:person-2 a example:Person ;
+    rdfs:label "Bob" ;
+    example:name "Bob" ;
+    example:email "bob@example.org" .
+
+example:org-1 a example:Organization ;
+    rdfs:label "Example Corp" ;
+    example:name "Example Corp" ;
+    example:description "A sample organization" .

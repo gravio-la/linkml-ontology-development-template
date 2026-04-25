@@ -32,10 +32,10 @@
             specialArgs = { inherit self; };
             modules = [ ./configurations/local-vm.nix ];
           };
-          contabo-server = nixpkgs.lib.nixosSystem {
+          remote-server = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit self; };
-            modules = [ ./configurations/contabo-server.nix ];
+            modules = [ ./configurations/server.nix ];
           };
         };
 

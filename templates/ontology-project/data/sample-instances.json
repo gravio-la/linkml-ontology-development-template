@@ -1,0 +1,14 @@
+[
+  {
+    "id": "person-1",
+    "name": "Alice",
+    "email": "alice@example.org",
+    "@type": "Person"
+  },
+  {
+    "id": "org-1",
+    "name": "Example Corp",
+    "description": "A sample organization",
+    "@type": "Organization"
+  }
+]
