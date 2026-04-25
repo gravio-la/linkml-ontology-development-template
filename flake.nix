@@ -39,12 +39,17 @@
           };
         };
 
-        templates = {
-          ontology-project = {
-            path = ./templates/ontology-project;
-            description = "Scaffold for a new LinkML ontology project";
+        templates =
+          let
+            ontologyProjectTemplate = {
+              path = ./templates/ontology-project;
+              description = "Scaffold for a new LinkML ontology project";
+            };
+          in
+          {
+            default = ontologyProjectTemplate;
+            ontology-project = ontologyProjectTemplate;
           };
-        };
       };
     };
 }
